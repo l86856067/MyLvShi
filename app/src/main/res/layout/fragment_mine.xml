@@ -25,6 +25,7 @@
                 android:scaleType="fitXY"
                 android:src="@mipmap/bg_head_oval"/>
             <TextView
+                android:id="@+id/mine_top_layout_guanzhu"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:gravity="center"
@@ -36,6 +37,7 @@
                 android:lines="2"
                 android:text="关注\n0"/>
             <TextView
+                android:id="@+id/mine_top_layout_fans"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:gravity="center"
@@ -47,6 +49,7 @@
                 android:lines="2"
                 android:text="粉丝\n0"/>
             <TextView
+                android:id="@+id/mine_top_layout_load"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:gravity="center"
@@ -59,6 +62,7 @@
                 android:lines="2"
                 android:text="点击登录"/>
             <ImageButton
+                android:id="@+id/mine_top_layout_mess"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignParentRight="true"
@@ -145,6 +149,7 @@
             android:layout_marginBottom="7dp"
             android:orientation="vertical">
             <RelativeLayout
+                android:id="@+id/mine_mid_layout_collection"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="7dp">
@@ -182,6 +187,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/hui"/>
             <RelativeLayout
+                android:id="@+id/mine_mid_layout_draft"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp">
@@ -219,6 +225,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/hui"/>
             <RelativeLayout
+                android:id="@+id/mine_mid_layout_movies"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp"
@@ -256,6 +263,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/hui"/>
             <RelativeLayout
+                android:id="@+id/mine_mid_layout_where"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp">
@@ -292,6 +300,7 @@
             android:background="@color/white"
             android:orientation="vertical">
             <RelativeLayout
+                android:id="@+id/mine_bottom_layout_sweep"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp">
@@ -320,6 +329,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/hui"/>
             <RelativeLayout
+                android:id="@+id/mine_bottom_layout_bind"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp">
@@ -357,6 +367,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/hui"/>
             <RelativeLayout
+                android:id="@+id/mine_bottom_layout_help"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp"
@@ -386,6 +397,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/hui"/>
             <RelativeLayout
+                android:id="@+id/mine_bottom_layout_setting"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:padding="10dp">

@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activitys.LandActivity"></activity>
+        <activity android:name=".view.activitys.LandActivity" />
+        <activity android:name=".view.activitys.SettingActivity"></activity>
     </application>
 
 </manifest>
