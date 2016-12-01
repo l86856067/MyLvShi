@@ -84,12 +84,12 @@
         "source": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
         "merged": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camera.xml",
         "source": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\bundles\\debug\\res\\layout\\camera.xml"
+    },
+    {
+        "merged": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "D:\\workspace\\lvshi\\MyLvShi\\qrcode\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_content_include.xml",

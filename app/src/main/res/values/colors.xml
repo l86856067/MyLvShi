@@ -3,10 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="rad">#DC143C</color>
     <color name="bar">#454545</color>
     <color name="white">#FFFFFF</color>
     <color name="touming">#0000</color>
     <color name="black">#000000</color>
     <color name="hui">#C9C9C9</color>
+    <color name="danhui">#F4F4F4</color>
     <color name="background">#EBEBEB</color>
 </resources>

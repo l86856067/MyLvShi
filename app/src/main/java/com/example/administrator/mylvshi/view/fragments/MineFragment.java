@@ -13,7 +13,9 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.administrator.mylvshi.R;
+import com.example.administrator.mylvshi.base.RectImageView;
 import com.example.administrator.mylvshi.view.activitys.LandActivity;
 import com.example.administrator.mylvshi.view.activitys.SettingActivity;
 import com.zxing.activity.CaptureActivity;
@@ -26,6 +28,8 @@ import butterknife.ButterKnife;
  */
 
 public class MineFragment extends Fragment implements View.OnClickListener {
+
+
 
     @BindView(R.id.mine_top_layout)
     RelativeLayout mine_top_layout;
@@ -44,8 +48,8 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     RelativeLayout mine_mid_layout_collection;
     @BindView(R.id.mine_mid_layout_draft)
     RelativeLayout mine_mid_layout_draft;
-    @BindView(R.id.mine_mid_layout_movies)
-    RelativeLayout mine_mid_layout_movies;
+    @BindView(R.id.mine_mid_layout_vip)
+    RelativeLayout mine_mid_layout_vip;
     @BindView(R.id.mine_mid_layout_where)
     RelativeLayout mine_mid_layout_where;
     @BindView(R.id.mine_bottom_layout_sweep)
@@ -56,6 +60,11 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     RelativeLayout mine_bottom_layout_help;
     @BindView(R.id.mine_bottom_layout_setting)
     RelativeLayout mine_bottom_layout_setting;
+
+    private final static int LAND = 2;
+    private final static int ZXING = 1;
+    private String muserName = null;
+    private String muserIcon = null;
 
     @Nullable
     @Override
@@ -80,7 +89,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
         mine_mid_layout_collection.setOnClickListener(this);
         mine_mid_layout_draft.setOnClickListener(this);
-        mine_mid_layout_movies.setOnClickListener(this);
+        mine_mid_layout_vip.setOnClickListener(this);
         mine_mid_layout_where.setOnClickListener(this);
         mine_bottom_layout_sweep.setOnClickListener(this);
         mine_bottom_layout_bind.setOnClickListener(this);
@@ -90,7 +99,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 1){
+        if (requestCode == ZXING){
             String str = data.getStringExtra("result");
             String s = str.substring(0,4);
             if ("http".equals(s)){
@@ -129,21 +138,35 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 builder.show();
             }
         }
+        if (requestCode == LAND){
+            muserName = data.getStringExtra("name");
+            muserIcon = data.getStringExtra("icon");
+            mine_top_layout_load.setText(muserName);
+            Glide.with(getActivity()).load(muserIcon).transform(new RectImageView(getContext())).into(mine_top_layout_head);
+        }
+        if (requestCode == 4){
+            mine_top_layout_load.setText("点击登录");
+            mine_top_layout_head.setImageResource(R.mipmap.bg_head_oval);
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.mine_bottom_layout_sweep:
-                startActivityForResult(new Intent(getActivity(), CaptureActivity.class),1);
-                break;
-            case R.id.mine_bottom_layout_setting:
-                startActivity(new Intent(getActivity(), SettingActivity.class));
-                break;
-            default:
-                startActivity(new Intent(getActivity(), LandActivity.class));
-                break;
+        if (true){
+            switch (v.getId()){
+                case R.id.mine_bottom_layout_sweep:
+                    startActivityForResult(new Intent(getActivity(), CaptureActivity.class),ZXING);
+                    break;
+                case R.id.mine_bottom_layout_setting:
+                    startActivityForResult(new Intent(getActivity(),SettingActivity.class),4);
+                    break;
+                case R.id.mine_mid_layout_vip:
+                    startActivity(new Intent(getActivity(), SettingActivity.class));
+                    break;
+                default:
+                    startActivityForResult(new Intent(getActivity(),LandActivity.class),LAND);
+                    break;
 //            case R.id.mine_top_layout:
 //                startActivity(new Intent(getActivity(), LandActivity.class));
 //                break;
@@ -162,6 +185,39 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 //            case R.id.mine_top_layout_load:
 //                startActivity(new Intent(getActivity(), LandActivity.class));
 //                break;
+            }
+        }else {
+            switch (v.getId()){
+                case R.id.mine_bottom_layout_sweep:
+                    startActivityForResult(new Intent(getActivity(), CaptureActivity.class),1);
+                    break;
+                case R.id.mine_bottom_layout_setting:
+                    startActivity(new Intent(getActivity(), SettingActivity.class));
+                    break;
+                default:
+                    startActivity(new Intent(getActivity(), LandActivity.class));
+                    break;
+//            case R.id.mine_top_layout:
+//                startActivity(new Intent(getActivity(), LandActivity.class));
+//                break;
+//            case R.id.mine_top_layout_mess:
+//                startActivity(new Intent(getActivity(), LandActivity.class));
+//                break;
+//            case R.id.mine_top_layout_head:
+//                startActivity(new Intent(getActivity(), LandActivity.class));
+//                break;
+//            case R.id.mine_top_layout_guanzhu:
+//                startActivity(new Intent(getActivity(), LandActivity.class));
+//                break;
+//            case R.id.mine_top_layout_fans:
+//                startActivity(new Intent(getActivity(), LandActivity.class));
+//                break;
+//            case R.id.mine_top_layout_load:
+//                startActivity(new Intent(getActivity(), LandActivity.class));
+//                break;
+            }
         }
+
     }
+
 }

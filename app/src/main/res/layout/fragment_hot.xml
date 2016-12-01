@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.administrator.mylvshi.view.activitys.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mine_hot_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/bar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="热榜" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.example.administrator.mylvshi.view.style.StackLayout
+        android:id="@+id/mine_hot_stack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+    </com.example.administrator.mylvshi.view.style.StackLayout>
+
+    <View
+        android:id="@+id/mine_hot_ani"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

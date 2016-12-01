@@ -70,6 +70,11 @@ public class MainActivity extends BaseActivity implements ActivityCompat.OnReque
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     private void initAndShowFragment() {
         homeFragment = new HomeFragment();
         destinationFragment = new DestinationFragment();
